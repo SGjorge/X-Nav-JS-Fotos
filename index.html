@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <style type="text/css" media="screen">
+       body{
+         padding:0;
+         margin:50px auto;
+         text-align:center;
+         font:100% Verdana;
+       }
+       h1 {
+         font-size: 1.5em;
+       }
+       #sentence {
+         font-size: 4em;
+       }
+       #another {
+         font-size: 2em;
+       }
+     </style>
+     <script type="text/javascript" charset="utf-8">
+      // only for jpg images
+       function picture(){
+          var img = "img/"
+          img += Math.floor(Math.random() * 5);
+          img += ".jpg"
+          var pic = document.getElementById("pic");
+          pic.src = img;
+          pic.hidden = "";
+          console.log(pic.src);
+       };
+     </script>
+     <title>Stupid pictures generator</title>
+   </head>
+   <body>
+      <p id="another"><a href="javascript:picture()">Another one!</a></p>
+      <img id="pic" src="" hidden="hidden"></img>
+   </body>
